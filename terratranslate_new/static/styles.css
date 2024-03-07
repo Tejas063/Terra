@@ -1,0 +1,267 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #45a049; /* Warm color */
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  margin-right: auto; /* Push logo to the extreme left */
+}
+
+.navbar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Header Styles */
+.header {
+  background-color: #45a049; /* Green with opacity */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative; /* Position relative for absolute positioning of video */
+}
+
+.header::before {
+  content: "";
+  background: url("static/video1.mp4") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3; /* Adjust the opacity to blend with header */
+  z-index: -1; /* Place the background behind other content */
+}
+
+.header .video-container {
+  max-width: 25%; /* Adjust video width */
+  margin-right: 10px; /* Add some space between video and text content */
+}
+
+.header .video-container video {
+  width: 100%; /* Make video responsive */
+  border-radius: 20px; /* Add border radius */
+}
+
+.header .text-content {
+  max-width: 65%; /* Adjust text content width */
+  text-align: left;
+  padding: 0 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow form elements to wrap to the next line */
+}
+
+.container form input[type="file"] {
+  margin-right: 10px;
+  margin-bottom: 10px; /* Add space below file input */
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.container form input::file-selector-button{
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.imageDisplay{
+  display: inline-block;
+}
+
+.container form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container form button:hover {
+  background-color: #45a049;
+}
+
+.btn-container {
+  width: 100%;
+  text-align: center; /* Center the button */
+  margin-top: 10px; /* Add space above the button */
+}
+.btn {
+  font-family: "Poppins", sans-serif;
+  background-color: #4caf50;
+  color: white;
+  padding: 3px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #2a5b1c;
+}
+
+.upload-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drag-area {
+  border: 2px dashed #45a049; /* Updated border color */
+  height: 500px;
+  width: 700px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.drag-area.active {
+  border: 2px solid #45a049; /* Updated border color */
+}
+
+.drag-area .icon {
+  font-size: 100px;
+  color: #45a049; /* Updated icon color */
+}
+
+.drag-area header {
+  font-size: 30px;
+  font-weight: 500;
+  color: #45a049; /* Updated header text color */
+}
+
+.drag-area span {
+  font-size: 25px;
+  font-weight: 500;
+  color: #45a049; /* Updated span text color */
+  margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #45a049; /* Updated button background color */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.drag-area button:hover {
+  background: #0056b3; /* Updated hover background color */
+}
+
+.drag-area img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (max-width: 745px) {
+  .drag-area button {
+    padding: 8px 20px;
+    font-size: 18px;
+    font-weight: 450;
+  }
+
+  .drag-area {
+    height: 400px;
+    width: 450px;
+  }
+
+  .drag-area header {
+    font-size: 25px;
+    font-weight: 450;
+    color: #45a049; /* Updated header text color */
+  }
+
+  .drag-area .icon {
+    font-size: 80px;
+    color: #45a049; /* Updated icon color */
+  }
+}

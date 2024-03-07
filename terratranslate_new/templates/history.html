@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image History</title>
+</head>
+<body>
+    <h1>Image History</h1>
+
+    <form action="/" method="get">
+        <button>Back</button>
+    </form>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sr.no</th>
+                <th>Source Image</th>
+                <th>Generated Image</th>
+                <th>Image Datetime</th>
+                <th>Source Image Size</th>
+                <th>Generated Image Size</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td><img src="data:image/png;base64,{{ item[0] }}" alt="Source Image"></td>
+                <td><img src="data:image/png;base64,{{ item[1] }}" alt="Generated Image"></td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>
+                <td>{{ item[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
