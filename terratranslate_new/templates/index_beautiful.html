@@ -25,9 +25,6 @@
           <li><a href="/">Home</a></li>
           <li><a href="/history">History</a></li>
           <li><a href="/login">Account</a></li>
-          {% if session_active %}
-            <li><a href="/logout">Logout</a></li>
-          {% endif %}
         </ul>
       </nav>
     </div>
@@ -58,37 +55,38 @@
     <div class="container">
       <h2>Generate Your Map</h2>
       <form action="/process_image" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".png, .jpg, .jpeg" required>
+        <input
+          type="file"
+          name="file"
+          accept=".png, .jpg, .jpeg"
+          required
+          hidden
+        />
+        <label for="file" class="btn">Choose File</label>
         <button type="submit">Process Image</button>
       </form>
 
       {% if msg %}
-        <p style="color: red;">{{ msg }}</p>
-      {% endif %}
-      
-      {% if src_image %}
-      <div class="imageDisplay"
-      style="margin-left: 50px;">
+      <p style="color: red">{{ msg }}</p>
+      {% endif %} {% if src_image %}
+      <div class="imageDisplay" style="margin-left: 50px">
         <img
-        class="satImage"
-        src="data:image/png;base64, {{ src_image }}"
-        alt="Satellite Image"
-        style="width: 256px; height: auto"
-      />
-        <h2 style="text-align: center;">Satellite Image</h2>
+          class="satImage"
+          src="data:image/png;base64, {{ src_image }}"
+          alt="Satellite Image"
+          style="width: 256px; height: auto"
+        />
+        <h2 style="text-align: center">Satellite Image</h2>
       </div>
 
-      <div class="imageDisplay"
-      style="float: right;
-      margin-right: 50px;">
+      <div class="imageDisplay" style="float: right; margin-right: 50px">
         <img
-        
-        class="genImage"
-        src="data:image/png;base64, {{ gen_image }}"
-        alt="Generated Image"
-        style="width: 256px; height: auto; "
-      />
-      <h2 style="text-align: center;">Generated Image</h2>
+          class="genImage"
+          src="data:image/png;base64, {{ gen_image }}"
+          alt="Generated Image"
+          style="width: 256px; height: auto"
+        />
+        <h2 style="text-align: center">Generated Image</h2>
       </div>
       {% endif %}
     </div>
