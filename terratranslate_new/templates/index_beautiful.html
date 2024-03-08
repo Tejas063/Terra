@@ -58,11 +58,10 @@
         <input
           type="file"
           name="file"
+          class="id"
           accept=".png, .jpg, .jpeg"
           required
-          hidden
         />
-        <label for="file" class="btn">Choose File</label>
         <button type="submit">Process Image</button>
       </form>
 
@@ -88,6 +87,7 @@
         />
         <h2 style="text-align: center">Generated Image</h2>
       </div>
+
       {% endif %}
     </div>
   </body>
