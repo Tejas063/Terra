@@ -7,7 +7,7 @@
 
 /* Global Styles */
 body {
-  font-family: "Poppins", sans-serif; /* Use Poppins font */
+  font-family: "Poppins", sans-serif;
   background-color: #f2f2f2;
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background-color: #45a049; /* Warm color */
+  background-color: #45a049;
   color: #fff;
   padding: 10px;
   display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 .navbar .logo {
-  margin-right: auto; /* Push logo to the extreme left */
+  margin-right: auto;
 }
 
 .navbar img {
@@ -49,14 +49,14 @@ body {
 
 /* Header Styles */
 .header {
-  background-color: #45a049; /* Green with opacity */
+  background-color: #45a049;
   color: #fff;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  position: relative; /* Position relative for absolute positioning of video */
+  position: relative;
 }
 
 .header::before {
@@ -68,22 +68,22 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.3; /* Adjust the opacity to blend with header */
-  z-index: -1; /* Place the background behind other content */
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .header .video-container {
-  max-width: 25%; /* Adjust video width */
-  margin-right: 10px; /* Add some space between video and text content */
+  max-width: 25%;
+  margin-right: 10px;
 }
 
 .header .video-container video {
-  width: 100%; /* Make video responsive */
-  border-radius: 20px; /* Add border radius */
+  width: 100%;
+  border-radius: 20px;
 }
 
 .header .text-content {
-  max-width: 65%; /* Adjust text content width */
+  max-width: 65%;
   text-align: left;
   padding: 0 20px;
 }
@@ -95,12 +95,12 @@ body {
 
 .header p {
   font-size: 16px;
-  color: #ccc;
+  color: #ffffff;
 }
 
 /* Container Styles */
 .container {
-  max-width: 800px;
+  max-width: 90%;
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
@@ -117,151 +117,71 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow form elements to wrap to the next line */
+  flex-wrap: wrap;
 }
 
 .container form input[type="file"] {
-  margin-right: 10px;
-  margin-bottom: 10px; /* Add space below file input */
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
+  display: none;
 }
 
-.container form input::file-selector-button{
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.imageDisplay{
-  display: inline-block;
-}
-
-.container form button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.container form button:hover {
-  background-color: #45a049;
-}
-
-.btn-container {
-  width: 100%;
-  text-align: center; /* Center the button */
-  margin-top: 10px; /* Add space above the button */
-}
-.btn {
+.container form label.btn {
   font-family: "Poppins", sans-serif;
   background-color: #4caf50;
   color: white;
-  padding: 3px;
+  padding: 10px 20px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
+  font-weight: bold;
+}
+.container form label.btn:hover {
+  background-color: #2a5b1c;
+}
+.container form button[type="submit"] {
+  font-family: "Poppins", sans-serif;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-left: 30px;
+  font-weight: bold;
 }
 
-.btn:hover {
+.container form button[type="submit"]:hover {
   background-color: #2a5b1c;
 }
 
-.upload-box {
-  width: 100%;
+/* Image Display Styles */
+.imageDisplay {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.drag-area {
-  border: 2px dashed #45a049; /* Updated border color */
-  height: 500px;
-  width: 700px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.imageDisplay img {
+  width: 45%;
+  margin-bottom: 20px;
 }
 
-.drag-area.active {
-  border: 2px solid #45a049; /* Updated border color */
-}
-
-.drag-area .icon {
-  font-size: 100px;
-  color: #45a049; /* Updated icon color */
-}
-
-.drag-area header {
-  font-size: 30px;
-  font-weight: 500;
-  color: #45a049; /* Updated header text color */
-}
-
-.drag-area span {
-  font-size: 25px;
-  font-weight: 500;
-  color: #45a049; /* Updated span text color */
-  margin: 10px 0 15px 0;
-}
-
-.drag-area button {
-  padding: 10px 25px;
-  font-size: 20px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  background: #45a049; /* Updated button background color */
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.drag-area button:hover {
-  background: #0056b3; /* Updated hover background color */
-}
-
-.drag-area img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-@media (max-width: 745px) {
-  .drag-area button {
-    padding: 8px 20px;
-    font-size: 18px;
-    font-weight: 450;
+@media (max-width: 768px) {
+  .container form input[type="file"] {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-  .drag-area {
-    height: 400px;
-    width: 450px;
+  .container form label.btn,
+  .container form button[type="submit"] {
+    width: 100%;
   }
 
-  .drag-area header {
-    font-size: 25px;
-    font-weight: 450;
-    color: #45a049; /* Updated header text color */
-  }
-
-  .drag-area .icon {
-    font-size: 80px;
-    color: #45a049; /* Updated icon color */
+  .imageDisplay img {
+    width: 100%;
   }
 }
