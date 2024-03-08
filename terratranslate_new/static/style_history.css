@@ -1,0 +1,77 @@
+/* Add the Google Font import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+/* Apply styles */
+html,
+body {
+  position: relative;
+  min-height: 100vh;
+  background-color: #c0ffaf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Style the container */
+.container {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 80%; /* Adjust width as needed */
+  padding: 40px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container h1 {
+  text-align: center;
+}
+
+/* Style the back button */
+.container form {
+  margin-top: 20px;
+  text-align: center; /* Center the button */
+}
+
+.container button {
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Alternate row background color */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style the images */
+img {
+  max-width: 100px; /* Adjust image size as needed */
+  max-height: 100px; /* Adjust image size as needed */
+  display: block;
+  margin: auto;
+}
