@@ -120,15 +120,6 @@ body {
   flex-wrap: wrap;
 }
 
-.container form input[type="file"] {
-  margin-right: 10px;
-  margin-bottom: 10px; /* Add space below file input */
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  font-size: 16px;
-}
-
 .container form input::file-selector-button {
   font-family: "Poppins", sans-serif;
   background-color: #4caf50;
@@ -140,6 +131,7 @@ body {
   font-size: 16px;
   margin-top: 20px;
   font-weight: bold;
+  margin-right: 20px;
 }
 .container form input::file-selector-button:hover {
   background-color: #2a5b1c;
@@ -155,6 +147,7 @@ body {
   font-size: 16px;
   margin-top: 20px;
   font-weight: bold;
+  margin-left: 100px;
 }
 
 .container form button[type="submit"]:hover {
